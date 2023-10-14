@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import myImg from "../images/blogimg.png";
+---
+
+<div class="bg-slate-200 flex justify-start p-1">
+    <Image src={myImg} width={300} alt="Blog Card Image" />
+    <span class="mx-3">
+        <h3 class="text-4xl">Title</h3>
+        <h4>description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit consequuntur perspiciatis quos animi, hic reprehenderit suscipit ab repudiandae quo expedita sit saepe tempore! Beatae error ad sunt a eius facilis.</h4>
+        <ul class="flex gap-1">
+            <li class="bg-green-700 px-1 rounded-md">test1</li>
+            <li class="bg-green-700 px-1 rounded-md">test2</li>
+        </ul>
+    </span>
+</div>

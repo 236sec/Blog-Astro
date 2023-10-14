@@ -25,10 +25,16 @@ html {
 h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
+    color: #FB2576;
+  }
+
+  h2 {
+    margin: 1rem 0;
+    font-size: 2rem;
   }
 html.dark {
-  background-color: #8b3a3a;
-  color: #ffffff;
+  background-color: #0a0a0a;
+  color: #f1efef;
   }
 
   body {
