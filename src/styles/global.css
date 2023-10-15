@@ -25,7 +25,8 @@ html {
 h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
-    color: #FB2576;
+    color: #000000;
+    @apply text-black dark:text-[#FB2576];
   }
 
   h2 {
