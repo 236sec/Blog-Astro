@@ -3,14 +3,14 @@ import { Image } from 'astro:assets';
 import myImg from "../images/blogimg.png";
 ---
 
-<div class="bg-slate-200 flex justify-start p-1 drop-shadow-sm rounded-md overflow-hidden">
-    <Image src={myImg} height={400} width={300} alt="Blog Card Image" />
+<div class="py-4 my-0 bg-white flex justify-start p-1 drop-shadow-sm rounded-md overflow-hidden border-r-[1px] border-b-[1px]">
     <span class="mx-3">
-        <h3 class="text-3xl">Title</h3>
+        <p>1 November 2023</p>
+        <h3 class="text-3xl"><a href="/blog:id">Title</a></h3>
         <h4>description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit consequuntur perspiciatis quos animi, hic reprehenderit suscipit ab repudiandae quo expedita sit saepe tempore! Beatae error ad sunt a eius facilis.</h4>
         <ul class="flex gap-1">
-            <li class="bg-green-700 px-1 rounded-md">test1</li>
-            <li class="bg-green-700 px-1 rounded-md">test2</li>
+            <li class="text-purple-500 px-1 hover:text-purple-700"><a href="/tag:id">test1</a></li>
+            <li class="text-purple-500 px-1 hover:text-purple-700"><a href="/tag:id">test2</a></li>
         </ul>
     </span>
 </div>
