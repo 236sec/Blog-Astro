@@ -1,24 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CardBlog from '../components/CardBlog.astro';
+import type { Frontmatter} from "../utils/types/typefrontmatter.ts";
 
+const posts = await Astro.glob<Frontmatter>('./posts/*.md');
 ---
 
 <Layout title='Blog'>
   <h1>Main Page</h1>
   <h2>Blog</h2>
   <ul class="flex flex-col gap-1">
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
-    <li><CardBlog /></li>
+    {posts.map(post => <li><CardBlog url={post.url} object={post.frontmatter}/></li>)}
   </ul>
 </Layout>
