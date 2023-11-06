@@ -13,6 +13,46 @@
   );
 }
 
+:root.dark, .dark ::backdrop {
+  color-scheme: dark;
+  --color-orange: var(--color-base-orange), 60%;
+  --theme-accent-opacity: 0.4;
+  --theme-accent: hsla(var(--color-orange), 1);
+  --theme-accent-secondary: hsla(var(--color-orange), 1);
+  --theme-text-accent: hsla(var(--color-orange), 1);
+  --theme-dim: hsla(var(--color-gray-90), 0.3);
+  --theme-dim-light: hsla(var(--color-gray-90), 0.2);
+  --theme-dim-lighter: hsla(var(--color-gray-90), 0.1);
+  --theme-divider: hsla(var(--color-gray-95), 0.1);
+  --theme-shade-subtle: hsla(var(--color-gray-95), 0.4);
+  --theme-text: hsla(var(--color-gray-90), 1);
+  --theme-text-light: hsla(var(--color-gray-80), 1);
+  --theme-text-lighter: hsla(var(--color-gray-70), 1);
+  --theme-bg: hsl(256, 27%, 19%);
+  --theme-bg-gradient-top: var(--theme-bg);
+  --theme-bg-gradient-bottom: hsl(251, 29%, 11%);
+  --theme-bg-hover: hsla(var(--color-purple), 0.2);
+  --theme-bg-offset: #0008;
+  --theme-backdrop-overlay: hsla(var(--color-gray-10), 0.8);
+  --theme-code-inline-bg: #ffffff16;
+  --theme-code-inline-text: var(--theme-text-light);
+  --theme-code-bg: hsla(257, 31%, 11%, 1);
+  --theme-code-tabs: hsla(261, 40%, 21%, 1);
+  --theme-code-text: hsla(var(--color-base-white), 80%, 1);
+  --theme-navbar-bg: var(--theme-bg);
+  --theme-selection-color: hsla(var(--color-base-white), 100%, 1);
+  --theme-code-mark-bg: hsl(224, 60%, 25%);
+  --theme-code-mark-border: hsl(225, 42%, 46%);
+  --theme-code-ins-bg: hsl(122, 29%, 17%);
+  --theme-code-ins-border: hsl(128, 41%, 32%);
+  --theme-code-ins-text: hsl(128, 31%, 55%);
+  --theme-code-del-bg: hsl(337, 47%, 19%);
+  --theme-code-del-border: hsl(340, 34%, 43%);
+  --theme-code-del-text: hsl(340, 24%, 65%);
+  --theme-glow-highlight: hsla(var(--color-base-purple), 50%, 1);
+  --theme-glow-diffuse: hsla(var(--color-base-purple), 35%, 0.4);
+}
+
 html {
     font-family: system-ui, sans-serif;
 }
@@ -44,10 +84,11 @@ h2 {
 body {
   margin: 0 auto;
   width: 100%;
+  height: 100vh;
   max-width: 80ch;
   padding: 1rem;
   line-height: 1.5;
-  @apply antialiased bg-white dark:bg-slate-900;
+  @apply antialiased bg-white bg-fixed dark:bg-gradient-to-tr from-slate-900 to-slate-800;
 }
 
 code {
