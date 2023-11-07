@@ -17,11 +17,13 @@ const formattedDate = `${day} ${month} ${year}`;
 object.tags.sort();
 ---
 
-<div class="py-4 my-0 flex bg-transparent justify-start p-1 drop-shadow-sm rounded-md overflow-hidden border-r-[1px] border-b-[1px] dark:shadow-xl dark:border-0">
-    <span class="mx-3">
-        <p>{formattedDate}</p>
-        <h3 class={`text-3xl`}><a href={url}>{object.title}</a></h3>
-        <h4>description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit consequuntur perspiciatis quos animi, hic reprehenderit suscipit ab repudiandae quo expedita sit saepe tempore! Beatae error ad sunt a eius facilis.</h4>
+<div class="py-4 my-0 flex bg-transparent justify-start p-1 drop-shadow-sm min-h-[200px] rounded-md overflow-hidden border-r-[1px] border-b-[1px] dark:shadow-xl dark:border-0">
+    <span class="mx-3 flex flex-col justify-between">
+        <span>
+            <p>{formattedDate}</p>
+            <h3 class={`text-3xl`}><a href={url}>{object.title}</a></h3>
+            <h4 class="line-clamp-4">{object.description}</h4>
+        </span>
         <ul class="flex gap-1">
             {object.tags.map((tag) => {
                 return <li class="text-purple-500 px-1 hover:text-purple-700"><a href={`/tag/${tag}`} >{tag}</a></li>
