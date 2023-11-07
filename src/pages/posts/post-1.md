@@ -30,3 +30,8 @@ I will finish the Astro tutorial, and then keep adding more posts. Watch this sp
 ```js
 console.log("Hello World.");
 ```
+
+```python
+print("Hello WORLD")
+
+```

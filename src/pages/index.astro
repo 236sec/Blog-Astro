@@ -10,6 +10,6 @@ const posts = await Astro.glob<Frontmatter>('./posts/*.md');
   <h1>Main Page</h1>
   <h2>Blog</h2>
   <ul class="flex flex-col gap-1">
-    {posts.map(post => <li><CardBlog url={post.url} object={post.frontmatter}/></li>)}
+    {posts.map(post => <li><CardBlog url={post.url} object={post.frontmatter} /></li>)}
   </ul>
 </Layout>
