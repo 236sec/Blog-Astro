@@ -1,7 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-const list_post = await Astro.glob('../posts/*.md');
-
+import CardBlog from '../../components/CardBlog.astro';
+const posts = await Astro.glob<Frontmatter>('../posts/*.md');
+posts.sort((a, b) => (a.frontmatter.pubDate > b.frontmatter.pubDate) ? -1 : 1);
 ---
 
 <Layout title='Blog'>
@@ -12,14 +13,35 @@ const list_post = await Astro.glob('../posts/*.md');
         <input class="border-2 border-black rounded-md p-1 font-mono" type="search" required min="2" max="30" name="search" id="search" placeholder="Enter the Search Term..">
       </div>
     </form>
+    <ul class="flex flex-col gap-1 my-5">
+      {posts.map(post => <li><CardBlog url={post.url} object={post.frontmatter} /></li>)}
+    </ul>
 </Layout>
 
 <script>
   const form = document.querySelector("form");
+  const posts = document.querySelectorAll(".blogcard") as NodeListOf<HTMLElement>;
   form?.addEventListener("submit",(e) => {
     e.preventDefault();
     const data = new FormData(form);
     const search = data.get("search");
     console.log(search);
+    posts.forEach((post) => {
+      if(post.children[0].children[0].children[1].children[0].innerHTML.toLowerCase().includes(search.toString().toLowerCase())){
+        post.style.display = "block";
+      }else{
+        post.style.display = "none";
+      }
+    }
+    )}
+  );
+  document.addEventListener("DOMContentLoaded", () => {
+    posts.forEach((post,ind) => {
+      if(ind < 9){
+        post.style.display = "block";
+      }else{
+        post.style.display = "none";
+      }
+    })
   })
 </script>
