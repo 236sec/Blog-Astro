@@ -1,8 +1,25 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const list_post = await Astro.glob('../posts/*.md');
 
 ---
 
 <Layout title='Blog'>
-  <h1>Blog Page</h1>
+    <h1>Blog Page</h1>
+    <form class="text-black border-2 rounded-lg border-black p-4">
+      <div class="flex flex-col">
+        <label for="search">Search the Blogs</label>
+        <input class="border-2 border-black rounded-md p-1 font-mono" type="search" required min="2" max="30" name="search" id="search" placeholder="Enter the Search Term..">
+      </div>
+    </form>
 </Layout>
+
+<script>
+  const form = document.querySelector("form");
+  form?.addEventListener("submit",(e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const search = data.get("search");
+    console.log(search);
+  })
+</script>

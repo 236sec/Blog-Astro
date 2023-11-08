@@ -9,7 +9,6 @@ image:
     alt: 'The full Astro logo.'
 tags: ["resource", "study", "learning in public","code"]
 ---
-# Setup MongoDB Database in Docker
 
 ## Run Docker Container
 

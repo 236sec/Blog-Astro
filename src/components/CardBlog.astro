@@ -1,5 +1,6 @@
 ---
 import type { Frontmatter} from "../utils/types/typefrontmatter.ts";
+import { formatDate } from "../utils/formatdate";
 
 interface Props {
     object: Frontmatter;
@@ -7,13 +8,8 @@ interface Props {
 }
 
 const { object , url } = Astro.props;
-const inputDate = new Date(object.pubDate);
+const formattedDate = formatDate(object.pubDate);
 
-const day = inputDate.getUTCDate();
-const month = inputDate.toLocaleString('default', { month: 'long' });
-const year = inputDate.getUTCFullYear();
-
-const formattedDate = `${day} ${month} ${year}`;
 object.tags.sort();
 ---
 

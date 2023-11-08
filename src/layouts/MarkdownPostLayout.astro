@@ -2,7 +2,9 @@
 import "../styles/global.css";
 import Navigation from '../components/Navigation.astro';
 import { ViewTransitions } from "astro:transitions";
+import { formatDate } from "../utils/formatdate";
 const { frontmatter } = Astro.props;
+const formatteddate = formatDate(frontmatter.pubDate);
 ---
 
 <!doctype html>
@@ -19,9 +21,12 @@ const { frontmatter } = Astro.props;
 	</head>
 	<body>
 		<Navigation />
-        <h1>{frontmatter.title}</h1>
-        <p>Written by {frontmatter.author}</p>
-        <article class="prose dark:prose-invert pb-10" >
+        <h1 class="font-bold">{frontmatter.title}</h1>
+		<div class="flex flex-row justify-between">
+			<small>Written by {frontmatter.author}</small>
+			<small>Published on {formatteddate}</small>
+		</div>
+        <article class="prose dark:prose-invert pb-10 prose-headings:font-bold prose-li:font-bold my-10" >
             <slot />
         </article>
         <script src="/prism.js" is:inline></script>
