@@ -1,13 +1,10 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Setup MongoDB Database in Docker'
-pubDate: 2023-07-11
+pubDate: 2023-11-07
 description: 'Setup the MongoDB on local with Docker.'
 author: '236sec'
-image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'The full Astro logo.'
-tags: ["resource", "study", "learning in public","code"]
+tags: ["resource", "study","code","docker","mongodb"]
 ---
 
 ## Run Docker Container

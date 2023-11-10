@@ -27,9 +27,21 @@ posts.sort((a, b) => (a.frontmatter.pubDate > b.frontmatter.pubDate) ? -1 : 1);
     const search = data.get("search");
     console.log(search);
     posts.forEach((post) => {
-      if(post.children[0].children[0].children[1].children[0].innerHTML.toLowerCase().includes(search.toString().toLowerCase())){
+      const title = post.children[0].children[0].children[1].children[0].innerHTML.toLowerCase();
+      const tags = post.children[0].children[1].getElementsByTagName('li');
+      const searchtext = search.toString().toLowerCase();
+      var havetag = false;
+      console.log(tags);
+      for (var i = 0; i < tags.length; i++) {
+        var textContent = tags[i].textContent || tags[i].innerText;
+        if(textContent.includes(searchtext)){
+          havetag = true;
+        }
+      }
+
+      if(title.includes(searchtext) || havetag){
         post.style.display = "block";
-      }else{
+      } else{
         post.style.display = "none";
       }
     }

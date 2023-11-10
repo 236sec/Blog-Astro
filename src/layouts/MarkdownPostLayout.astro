@@ -26,7 +26,7 @@ const formatteddate = formatDate(frontmatter.pubDate);
 			<small>Written by {frontmatter.author}</small>
 			<small>Published on {formatteddate}</small>
 		</div>
-        <article class="prose dark:prose-invert pb-10 prose-headings:font-bold prose-li:font-bold my-10" >
+        <article class="prose dark:prose-invert pb-10 prose-headings:font-bold prose-li:font-bold my-10 max-w-5xl" >
             <slot />
         </article>
         <script src="/prism.js" is:inline></script>
