@@ -16,7 +16,7 @@ const posts_show = posts.slice(0, 8);
       </div>
     </form>
     <ul class="flex flex-col gap-1 my-5">
-      {posts_show.map(post => <li><CardBlog url={post.url} object={post.frontmatter} /></li>)}
+        {posts_show.map(post => <li><CardBlog url={post.url} object={post.frontmatter} /></li>)}
     </ul>
 </Layout>
 
@@ -33,5 +33,11 @@ const posts_show = posts.slice(0, 8);
     url.searchParams.set("q",search);
     window.location.assign(url.toString());
   });
-  document.addEventListener("DOMContentLoaded", () => {})
+  document.addEventListener("DOMContentLoaded", () => {
+    const search = document.querySelector("#search") as HTMLInputElement;
+    const searchParams = new URLSearchParams(window.location.search);
+    const q = searchParams.get("q");
+    search.value = q || "";
+    search.focus();
+  })
 </script>
