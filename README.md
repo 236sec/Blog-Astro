@@ -1,41 +1,51 @@
-# Astro Starter Kit: Basics
+# [My Blog [WebSite](https://blog-astro-flame.vercel.app/ "WebSite")]
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Overview
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Welcome to My Blog [WebSite](https://blog-astro-flame.vercel.app/ "WebSite")! This is the source code repository for my personal blog, where I share my thoughts, projects, and experiences.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Table of Contents
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- [\[My Blog WebSite\]](#my-blog-website)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Demo](#demo)
+  - [Installation](#installation)
+  - [Technologies Used](#technologies-used)
+  - [🧞 Commands](#-commands)
 
-## 🚀 Project Structure
+## Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Blog Posts**: Share your thoughts, projects, and experiences through blog posts.
+- **Search Blog**: Find your blog by search form.
+- **Markdown Blog**: Using Markdown to show a blog.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Demo
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Check out the live demo of the website at https://blog-astro-flame.vercel.app
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Installation
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. **Clone Repository:**
+   ```bash
+   git clone https://github.com/236sec/Blog-Astro.git
+   ```
+2. **Installs dependencies**
+   ```bash
+  npm install
+   ```
 
+3. **Start the development server**
+   ```bash
+  npm run dev
+   ```
+   
+## Technologies Used
+- HTML/CSS/JS
+- Astro Framework
+- Vercel (deploy)
+   
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -48,7 +58,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
