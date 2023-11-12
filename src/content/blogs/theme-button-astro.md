@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Theme Button For Astro'
 pubDate: 2023-11-9
 description: 'Use theme in astro.'

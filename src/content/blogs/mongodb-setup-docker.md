@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Setup MongoDB Database in Docker'
 pubDate: 2023-11-07
 description: 'Setup the MongoDB on local with Docker.'
