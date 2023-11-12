@@ -1,10 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import CardBlog from '../../components/CardBlog.astro';
-import { getCollection } from 'astro:content';
-const posts = await getCollection("blogs");
-posts.sort((a, b) => (a.data.pubDate > b.data.pubDate) ? -1 : 1);
-const posts_show = posts.slice(0, 8);
 ---
 
 <Layout title='Blog'>
