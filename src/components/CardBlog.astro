@@ -1,27 +1,27 @@
 ---
 import type { Frontmatter} from "../utils/types/typefrontmatter.ts";
 import { formatDate } from "../utils/formatdate";
+import type { CollectionEntry } from "astro:content";
 
 interface Props {
-    object: Frontmatter;
-    url: string;
+    object: CollectionEntry<"blogs">;
 }
 
-const { object , url } = Astro.props;
-const formattedDate = formatDate(object.pubDate);
+const { object } = Astro.props;
+const formattedDate = formatDate(object.data.pubDate);
 
-object.tags.sort();
+object.data.tags.sort();
 ---
 
 <div class="blogcard py-4 my-0 flex bg-transparent justify-start p-1 drop-shadow-sm min-h-[200px] rounded-md overflow-hidden border-r-[1px] border-b-[1px] dark:shadow-xl dark:border-0">
     <span class="mx-3 flex flex-col justify-between">
         <span>
             <p>{formattedDate}</p>
-            <h3 class={`text-3xl`}><a href={url}>{object.title}</a></h3>
-            <h4 class="line-clamp-4">{object.description}</h4>
+            <h3 class={`text-3xl`}><a href={`/blog/${object.slug}`} >{object.data.title}</a></h3>
+            <h4 class="line-clamp-4">{object.data.description}</h4>
         </span>
         <ul class="flex gap-1">
-            {object.tags.map((tag) => {
+            {object.data.tags.map((tag) => {
                 return <li class="text-purple-500 px-1 hover:text-purple-700"><a href={`/tag/${tag}`} >{tag}</a></li>
             })}
         </ul>
