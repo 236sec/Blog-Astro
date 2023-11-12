@@ -21,8 +21,7 @@ const posts = await getCollection("blogs", ({ data }) => {
 });
 ---
 <Layout title='Blog'>
-  <h1>Main Page</h1>
-  <h2>Recent Blog</h2>
+  <h2>Result for {tag}</h2>
   <ul class="flex flex-col gap-1">
     {posts.map(post => <li><CardBlog object={post} /></li>)}
   </ul>
