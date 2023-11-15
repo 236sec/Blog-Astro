@@ -28,15 +28,18 @@ Check out the live demo of the website at https://blog-astro-flame.vercel.app
 ## Installation
 
 1. **Clone Repository:**
+   
    ```bash
    git clone https://github.com/236sec/Blog-Astro.git
    ```
 2. **Installs dependencies**
+   
    ```bash
    npm install
    ```
 
-3. **Start the development server**
+4. **Start the development server**
+   
    ```bash
    npm run dev
    ```
