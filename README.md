@@ -33,12 +33,12 @@ Check out the live demo of the website at https://blog-astro-flame.vercel.app
    ```
 2. **Installs dependencies**
    ```bash
-  npm install
+   npm install
    ```
 
 3. **Start the development server**
    ```bash
-  npm run dev
+   npm run dev
    ```
    
 ## Technologies Used
