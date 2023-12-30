@@ -40,3 +40,8 @@ disable root remote login in `/etc/ssh/sshd_config`
 ```bash
 PermitRootLogin no
 ```
+
+if you login to `newuser` use this command to get root permission
+```bash
+sudo su -
+```
